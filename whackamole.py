@@ -10,11 +10,14 @@ def main():
         screen = pygame.display.set_mode((640, 512))
         clock = pygame.time.Clock()
         running = True
+        x = 320
+        y = 218
         while running:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
             screen.fill("light green")
+            screen.blit(mole_image, mole_image.get_rect(topleft=(x, y)))
             pygame.display.flip()
             clock.tick(60)
     finally:
